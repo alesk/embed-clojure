@@ -12,7 +12,7 @@ required jars) on the `CLASSPATH`.
         java EvalClojure
 
 
-Look at `EvalClojure.java[4]` for usage examples. 
+Look at `[EvalClojure.java][4]` for usage examples. 
 
 
 [1]: http://blog.jayfields.com/2011/12/clojure-java-interop.html
