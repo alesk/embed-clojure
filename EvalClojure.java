@@ -22,24 +22,37 @@ public class EvalClojure {
 
         public static void main(String [] args) throws Exception {
 
+                // add local array arr to clojure RT as user/a
                 int[] arr = {1,2,3,4};
                 def("a", (Object) arr);
 
+                // add local hashmap to clojure RT as user/o
                 Map<String,Object> map = new HashMap<String, Object>();
                 map.put("a", (Object) arr);
                 map.put("c", (Object) "My String");
                 def("o", (Object) map);
 
+                // import clojure.string namespace
                 readAndEval("(require 'clojure.string)");
+
+                // print content of user/a
                 repl("(apply str user/a)");
 
+                // more engageing script
                 repl("(clojure.string/join \", \" (map #(* % %) user/a))");
 
+                // get string from hashmap
                 repl("(str (.get user/o \"c\"))");
 
                 repl("(apply str (.get user/o \"a\"))");
 
+                // load script (clj is attached automatically)
                 RT.load("foo");
+
+                // load script with full path name
                 RT.loadResourceScript("foo.clj");
+
+                // calling function from a script
+                repl("(user/foo \"Hello\" \"World\")");
         }
 } 
