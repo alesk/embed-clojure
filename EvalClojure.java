@@ -1,8 +1,10 @@
 import clojure.lang.RT;
 import clojure.lang.Var;
 import clojure.lang.Symbol;
+import clojure.lang.Compiler;
 import clojure.lang.PersistentList;
 
+import java.io.StringReader;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -40,6 +42,9 @@ public class EvalClojure {
 
                 // more engaging script
                 repl("(clojure.string/join \", \" (map #(* % %) user/a))");
+
+                //Compiler.load(readAndEval("(do (ns user)  (clojure.string/join \", \" (map #(* % %) a)))");
+                //RT.pushThreadBindings(RT.mapUniqueKeys(RT.CURRENT_NS, Symbol.intern("user")));
 
                 // get string from hashmap
                 repl("(str (.get user/o \"c\"))");
