@@ -38,7 +38,7 @@ public class EvalClojure {
                 // print content of user/a
                 repl("(apply str user/a)");
 
-                // more engageing script
+                // more engaging script
                 repl("(clojure.string/join \", \" (map #(* % %) user/a))");
 
                 // get string from hashmap
