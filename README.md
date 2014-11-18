@@ -12,7 +12,10 @@ required jars) on the `CLASSPATH`.
         java EvalClojure
 
 
+Look at `EvalClojure.java[4]` for usage examples. 
+
 
 [1]: http://blog.jayfields.com/2011/12/clojure-java-interop.html
 [2]: http://stackoverflow.com/questions/7708402/passing-objects-from-java-to-a-clojure-eval
 [3]: http://stackoverflow.com/questions/14987910/java-clojure-java
+[4]: https://github.com/alesk/embed-clojure/blob/master/EvalClojure.java#L23
