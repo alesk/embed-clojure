@@ -1,16 +1,12 @@
 import clojure.lang.RT;
 import clojure.lang.Var;
 import clojure.lang.Symbol;
-import clojure.lang.Compiler;
 import clojure.lang.PersistentList;
 
-import java.io.StringReader;
 import java.util.Map;
 import java.util.HashMap;
 
 public class EvalClojure {
-
-        // all relevant classes should be imported here
 
 
         private static Var eval = RT.var("clojure.core", "eval");

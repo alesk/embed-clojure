@@ -1,6 +1,6 @@
 # Embed Clojure
 
-A template project demonstrating embed clojure as a scripting environment inside
+A template project demonstrating embedding clojure as a scripting environment inside
 a java host.
 
 ## Compile
@@ -16,7 +16,7 @@ Look at [EvalClojure.java][4] for usage examples.
 
 ## Update!!
 
-Since clojure 1.6, there is a better way to comunicate with clojure, namely, through `clojure.java.api.Clojure` interface.
+Since clojure 1.6, there is a better way to communicate with clojure, namely, through `clojure.java.api.Clojure` interface.
 Read [this stackoverflow post][5] and [java api documentation][6].
 
 
